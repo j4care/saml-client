@@ -11,6 +11,8 @@ In order to work, the library must be provided with the xml metadata information
 
 As of now, I've tested the library with ADFS and Okta as identity providers.
 
+OpenSAML5 port by j4care
+
 # Maven
 
 Add this dependency to your `pom.xml` to reference the library:
