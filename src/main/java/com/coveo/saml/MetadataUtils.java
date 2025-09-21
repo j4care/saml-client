@@ -114,7 +114,7 @@ public class MetadataUtils {
 				return null;
 			}
 
-			nameIDFormat.setFormat("urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified");
+			nameIDFormat.setURI("urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified");
 			spSSODescriptor.getNameIDFormats().add(nameIDFormat);
 
 			AssertionConsumerService assertionConsumerService = createSAMLObject(AssertionConsumerService.class);
@@ -171,7 +171,7 @@ public class MetadataUtils {
 			logger.error("Error while creating SAML object", e);
 			return null;
 		}
-		T object = (T) builderFactory.getBuilder(defaultElementName).buildObject(defaultElementName);
+		T object = clazz.cast(builderFactory.getBuilder(defaultElementName).buildObject(defaultElementName));
 
 		return object;
 	}

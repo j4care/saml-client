@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.coveo</groupId>
+  <groupId>com.j4care</groupId>
   <artifactId>saml-client</artifactId>
   <version>5.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -25,12 +25,17 @@
       <organization>Coveo</organization>
       <organizationUrl>https://github.com/coveooss</organizationUrl>
     </developer>
+    <developer>
+      <name>Michael Knapp</name>
+      <organization>j4care</organization>
+      <organizationUrl>https://github.com/j4care</organizationUrl>
+    </developer>
   </developers>
 
   <scm>
     <connection>scm:git:git@github.com:coveooss/saml-client.git</connection>
-    <developerConnection>scm:git:git@github.com:coveooss/saml-client.git</developerConnection>
-    <url>https://github.com/coveooss/saml-client</url>
+    <developerConnection>scm:git:git@github.com:j4care/saml-client.git</developerConnection>
+    <url>https://github.com/j4care/saml-client</url>
   </scm>
 
   <distributionManagement>
@@ -54,10 +59,10 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
 
-    <opensaml.version>4.3.0</opensaml.version>
+    <opensaml.version>5.1.3</opensaml.version>
   </properties>
 
   <dependencyManagement>
@@ -76,12 +81,11 @@
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
-      <version>6.0.0</version>
       <scope>provided</scope>
   </dependency>
     <dependency>
       <groupId>org.opensaml</groupId>
-      <artifactId>opensaml-core</artifactId>
+      <artifactId>opensaml-core-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.opensaml</groupId>
@@ -94,22 +98,19 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>2.0.12</version>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-text</artifactId>
-      <version>1.10.0</version>
+      <version>1.14.0</version>
     </dependency>
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
-      <version>2.14.0</version>
     </dependency>
     <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
-      <version>1.16.0</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

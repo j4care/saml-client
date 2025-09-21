@@ -28,11 +28,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
-
 import javax.xml.namespace.QName;
-
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.BOMInputStream;
@@ -94,10 +90,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-
-import net.shibboleth.utilities.java.support.component.ComponentInitializationException;
-import net.shibboleth.utilities.java.support.xml.BasicParserPool;
-import net.shibboleth.utilities.java.support.xml.XMLParserException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import net.shibboleth.shared.component.ComponentInitializationException;
+import net.shibboleth.shared.xml.XMLParserException;
+import net.shibboleth.shared.xml.impl.BasicParserPool;
 
 public class SamlClient {
   private static final Logger logger = LoggerFactory.getLogger(SamlClient.class);

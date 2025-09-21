@@ -17,6 +17,8 @@
 
 package com.coveo.saml;
 
+import java.io.Writer;
+import java.util.Map;
 import org.w3c.dom.DOMConfiguration;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
@@ -25,13 +27,8 @@ import org.w3c.dom.ls.DOMImplementationLS;
 import org.w3c.dom.ls.LSOutput;
 import org.w3c.dom.ls.LSSerializer;
 import org.w3c.dom.ls.LSSerializerFilter;
-
-import net.shibboleth.utilities.java.support.component.ComponentInitializationException;
-import net.shibboleth.utilities.java.support.xml.BasicParserPool;
-
-import java.io.Writer;
-
-import java.util.Map;
+import net.shibboleth.shared.component.ComponentInitializationException;
+import net.shibboleth.shared.xml.impl.BasicParserPool;
 
 public class XMLHelper {
   /**
