@@ -92,9 +92,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import net.shibboleth.shared.component.ComponentInitializationException;
-import net.shibboleth.shared.xml.XMLParserException;
-import net.shibboleth.shared.xml.impl.BasicParserPool;
+import net.shibboleth.utilities.java.support.component.ComponentInitializationException;
+import net.shibboleth.utilities.java.support.xml.BasicParserPool;
+import net.shibboleth.utilities.java.support.xml.XMLParserException;
 
 public class SamlClient {
   private static final Logger logger = LoggerFactory.getLogger(SamlClient.class);

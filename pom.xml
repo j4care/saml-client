@@ -62,7 +62,7 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
 
-    <opensaml.version>5.1.3</opensaml.version>
+    <opensaml.version>4.3.2</opensaml.version>
   </properties>
 
   <dependencyManagement>
@@ -81,11 +81,12 @@
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
+      <version>6.0.0</version>
       <scope>provided</scope>
   </dependency>
     <dependency>
       <groupId>org.opensaml</groupId>
-      <artifactId>opensaml-core-api</artifactId>
+      <artifactId>opensaml-core</artifactId>
     </dependency>
     <dependency>
       <groupId>org.opensaml</groupId>
