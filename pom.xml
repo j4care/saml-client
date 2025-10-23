@@ -29,7 +29,8 @@
       <name>Michael Knapp</name>
       <organization>j4care</organization>
       <organizationUrl>https://github.com/j4care</organizationUrl>
-    </developer>
+     <email>michael.knapp@j4care.com</email>
+   </developer>
   </developers>
 
   <scm>
