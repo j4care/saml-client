@@ -10,7 +10,7 @@
   <name>${project.groupId}:${project.artifactId}</name>
 
   <description>Dead simple client for obtaining authentication from SAML identity provider</description>
-  <url>https://github.com/coveo/saml-client</url>
+  <url>https://github.com/j4care/saml-client</url>
 
   <licenses>
     <license>
@@ -34,7 +34,7 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:coveooss/saml-client.git</connection>
+    <connection>scm:git:git@github.com:j4care/saml-client.git</connection>
     <developerConnection>scm:git:git@github.com:j4care/saml-client.git</developerConnection>
     <url>https://github.com/j4care/saml-client</url>
   </scm>
@@ -63,7 +63,7 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
 
-    <opensaml.version>5.1.3</opensaml.version>
+    <opensaml.version>4.3.2</opensaml.version>
   </properties>
 
   <dependencyManagement>
@@ -82,11 +82,12 @@
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
+     <version>6.0.0</version>
       <scope>provided</scope>
   </dependency>
     <dependency>
       <groupId>org.opensaml</groupId>
-      <artifactId>opensaml-core-api</artifactId>
+      <artifactId>opensaml-core</artifactId>
     </dependency>
     <dependency>
       <groupId>org.opensaml</groupId>

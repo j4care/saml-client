@@ -27,8 +27,8 @@ import org.w3c.dom.ls.DOMImplementationLS;
 import org.w3c.dom.ls.LSOutput;
 import org.w3c.dom.ls.LSSerializer;
 import org.w3c.dom.ls.LSSerializerFilter;
-import net.shibboleth.shared.component.ComponentInitializationException;
-import net.shibboleth.shared.xml.impl.BasicParserPool;
+import net.shibboleth.utilities.java.support.component.ComponentInitializationException;
+import net.shibboleth.utilities.java.support.xml.BasicParserPool;
 
 public class XMLHelper {
   /**
