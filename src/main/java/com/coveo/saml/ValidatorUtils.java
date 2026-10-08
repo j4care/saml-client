@@ -17,12 +17,15 @@ import org.opensaml.security.credential.Credential;
 import org.opensaml.xmlsec.signature.Signature;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.opensaml.xmlsec.signature.support.SignatureValidator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * The type Validator utils.
  */
 class ValidatorUtils {
 
+	private static final Logger logger = LoggerFactory.getLogger(ValidatorUtils.class);
   /**
    * Validate response.
    *
@@ -190,6 +193,7 @@ class ValidatorUtils {
                 SignatureValidator.validate(signature, credential);
                 return true;
               } catch (SignatureException | IllegalArgumentException ex) {
+            	  logger.error("error", ex);
                 return false;
               }
             });
