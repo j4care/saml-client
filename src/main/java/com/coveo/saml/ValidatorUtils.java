@@ -3,7 +3,6 @@ package com.coveo.saml;
 import java.time.Instant;
 import java.util.List;
 import java.util.Objects;
-
 import org.opensaml.saml.common.SignableSAMLObject;
 import org.opensaml.saml.saml2.core.Assertion;
 import org.opensaml.saml.saml2.core.Conditions;
@@ -14,6 +13,7 @@ import org.opensaml.saml.saml2.core.Response;
 import org.opensaml.saml.saml2.core.StatusCode;
 import org.opensaml.saml.saml2.core.StatusResponseType;
 import org.opensaml.security.credential.Credential;
+import org.opensaml.security.x509.X509Credential;
 import org.opensaml.xmlsec.signature.Signature;
 import org.opensaml.xmlsec.signature.support.SignatureException;
 import org.opensaml.xmlsec.signature.support.SignatureValidator;
@@ -191,9 +191,10 @@ class ValidatorUtils {
             credential -> {
               try {
                 SignatureValidator.validate(signature, credential);
+          	  logger.info("Validation success: " + ((X509Credential)credential).getEntityCertificate().getSubjectX500Principal());
                 return true;
               } catch (SignatureException | IllegalArgumentException ex) {
-            	  logger.error("error", ex);
+            	  logger.info("Validation failure: " + ((X509Credential)credential).getEntityCertificate().getSubjectX500Principal() + ", " + ex.getMessage());
                 return false;
               }
             });
